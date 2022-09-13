@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\game;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -20,6 +21,10 @@ return new class extends Migration
             $table->string('title',30);
             $table->timestamps();
         });
+
+        game::create(['publisher'=>'EA','studio'=>'Dice', 'title'=>'Battlefield']);
+        game::create(['publisher'=>'Bethesda','studio'=>'Bethesda', 'title'=>'Fallout']);
+        game::create(['publisher'=>'Ubisoft','studio'=>'Ubisoft Montreal', 'title'=>'Rainbow 6 siege']);
     }
 
     /**
