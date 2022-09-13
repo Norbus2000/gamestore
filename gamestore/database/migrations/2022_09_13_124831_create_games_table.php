@@ -14,7 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('games', function (Blueprint $table) {
-            $table->id();
+            $table->id('games_id');
+            $table->string('publisher',30);
+            $table->string('studio',20);
+            $table->string('title',30);
             $table->timestamps();
         });
     }
